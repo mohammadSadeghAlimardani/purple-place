@@ -1,0 +1,62 @@
+[
+    {
+        "htmlEntity" : "&#9917;",
+        "dataCard" : "football"
+    },
+    {
+        "htmlEntity" : "&#127936;",
+        "dataCard" : "basketball"
+    },
+    {
+        "htmlEntity" : "&#127944;",
+        "dataCard" : "american-football"
+    },
+    {
+        "htmlEntity" : "&#128660;",
+        "dataCard" : "police-car"
+    },
+    {
+        "htmlEntity" : "&#128664;",
+        "dataCard" : "uncoming-automobile"
+    },
+    {
+        "htmlEntity" : "&#127807;",
+        "dataCard" : "leaf"
+    },
+    {
+        "htmlEntity" : "&#127809;",
+        "dataCard" : "maple-leaf"
+    },
+    {
+        "htmlEntity" : "&#128000;",
+        "dataCard" : "rat"
+    },
+    {
+        "htmlEntity" : "&#128001;",
+        "dataCard" : "mouse"
+    },
+    {
+        "htmlEntity" : "&#129473;",
+        "dataCard" : "cup-cake"
+    },
+    {
+        "htmlEntity" : "&#127874;",
+        "dataCard" : "birthday-cake"
+    },
+    {
+        "htmlEntity" : "&#129374;",
+        "dataCard" : "pancake"
+    },
+    {
+        "htmlEntity" : "&#9999;",
+        "dataCard" : "pencil"
+    },
+    {
+        "htmlEntity" : "&#128394;",
+        "dataCard" : "pen"
+    },
+    {
+        "htmlEntity" : "&#128395;&#65039;",
+        "dataCard" : "fountain-pen"
+    }
+]
