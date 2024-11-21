@@ -1,0 +1,242 @@
+@font-face {
+    font-family: 'Avenir-Light';
+    src: url('../fonts/Avenir\ Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Avenir-Medium';
+    src: url('../fonts/Avenir\ Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Avenir-Regular';
+    src: url('../fonts/Avenir\ Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Pacifico-Regular';
+    src: url('../fonts/Pacifico-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'FCBARCELONA-Bold';
+    src: url('../fonts/FCBARCELONA-Bold.woff') format('woff');
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: url('../images/background.jpg') 0 50%/cover;
+    font-family: 'Avenir-Regular';
+}
+h1{
+    font-size: 1.5rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+h3{
+    font-size: 1.17rem;
+}
+h4{
+    font-size: 1rem;
+}
+h5{
+    font-size: 0.83rem;
+}
+h6{
+    font-size: 0.67rem;
+}
+
+/* ALERT */
+.alert{
+    text-align: center;
+    background-color: red;
+    color: white;
+    padding: 1.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    transition: all 0.5s;
+    z-index: 100;
+}
+.alert.show{
+    transform: translateY(0);
+}
+/* CHOOSE MODE */
+.choose-grid{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: #000000cc;
+    transition: all 0.5s;
+}
+.choose-grid.hide{
+    transform: scale(0);
+}
+.choose-grid-container{
+    padding: 2.5rem;
+    width: 50%;
+    background-color: white;
+}
+.choose-grid-container h3{
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+.choose-grid-container form .radio-boxes{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.choose-grid-container form .btn.btn-info{
+    background-color: #1974F8;
+    color: white;
+    font-family: 'Avenir-Regular';
+    letter-spacing: 1px;
+    border: 1px solid #1974F8;
+    text-transform: capitalize;
+    padding: 0.35rem 1rem;
+    font-size: 1.05rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.choose-grid-container form .btn.btn-info:hover{
+    background-color: #498bef;
+}
+/* GAME */
+.game-container{
+    width: 95%;
+    margin: 0 auto;
+    padding: 6rem 0;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.stop-watch .progress-stop-watch{
+    height: 20rem;
+    background-color: #1974F8;
+    border: 5px solid #052658;
+    clip-path: polygon(25% 0%, 75% 0%, 60% 50%, 75% 100%, 25% 100%, 40% 50%);
+}
+.stop-watch .progress-stop-watch .progress-stop-watch-value{
+    width: 100%;
+    height: 0%;                     /* increase height */
+    background-color: white;
+}
+
+
+.cards-container{
+    perspective: 1000px;
+    display: grid;
+    grid-template-rows: 7rem;
+    gap: 0.5rem;
+    background-color: #052658;
+}
+.cards-container .card{
+    transform-style: preserve-3d;
+    position: relative;
+    background-color: white;
+    transition: all 0.5s;
+    height: 7rem;
+}
+.cards-container .card.rotated{
+    transform: rotateY(180deg);
+}
+.cards-container .card.hidden{
+    visibility: hidden;
+}
+.cards-container .card .front,.back{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: grid;
+    place-items: center;
+}
+.cards-container .card .front{
+    backface-visibility: hidden;
+    z-index: 20;
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-radial-gradient(#ad5389, #3c1053);  /* Chrome 10-25, Safari 5.1-6 */
+    background: radial-gradient(#ad5389, #3c1053); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.cards-container .card .back{
+    transform: rotateY(180deg);
+    background-color: red;
+}
+/* FINISH GAME */
+.gameOver-message, .victory-message{
+    text-align: center;
+    transform: scale(0);
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    transition: all 0.5s;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.gameOver-message.show, .victory-message.show{
+    transform: scale(1);
+}
+.gameOver-message section, .victory-message section{
+    background-color: white;
+    padding: 3rem;
+    font-family: 'Pacifico-Regular';
+    font-size: 4rem;
+}
+.gameOver-message h2, .victory-message h2{
+    font-size: 2rem;
+}
+.victory-message p{
+    font-family: 'FCBARCELONA-Bold';
+    margin-bottom: 1rem;
+}
+.victory-message ul{
+    margin: 2rem 0 1.5rem 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 0 1.5rem;
+}
+
+/* star icon Animation : */
+@keyframes minimize {
+    0%{
+        transform: scale(5);
+    }
+    25%{
+        transform: scale(4);
+    }
+    50%{
+        transform: scale(3);
+    }
+    75%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.victory-message ul i{
+    font-size: 2.5rem;
+    color: #f7f727;
+}
+.victory-message ul i.minimized{
+    animation-name: minimize;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    font-size: 2.5rem;
+    color: #f7f727;
+}
