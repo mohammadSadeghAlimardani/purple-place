@@ -88,6 +88,7 @@ h6{
 .choose-grid-container h3{
     text-transform: capitalize;
     margin-bottom: 2rem;
+    line-height: 1.6;
 }
 .choose-grid-container form .radio-boxes{
     display: flex;
