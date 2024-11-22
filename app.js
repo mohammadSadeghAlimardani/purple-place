@@ -185,7 +185,7 @@ function Timer(columns){
                         createStarIcon();
                         setTimeout(() => {
                             createStarIcon();
-                        }, 2000); 
+                        }, 1850); 
                     }, 1750); 
                 }, 1250);
             }
